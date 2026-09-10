@@ -1,0 +1,63 @@
+{
+    "geode": "v5.10.1",
+    "gd": {
+        "android": "2.2081"
+    },
+    "id": "andrey.touch-indicator",
+    "name": "Touch Indicator",
+    "version": "v1.1.0",
+    "developer": "Andrey",
+    "description": "Shows a customizable visual indicator where the player touches the screen.",
+    "settings": {
+        "enabled": {
+            "name": "Enabled",
+            "description": "Show touch indicators.",
+            "type": "bool",
+            "default": true
+        },
+        "radius": {
+            "name": "Size",
+            "description": "Size of the touch indicator.",
+            "type": "int",
+            "default": 18,
+            "min": 6,
+            "max": 50
+        },
+        "duration": {
+            "name": "Fade duration",
+            "description": "How long the indicator remains visible after release.",
+            "type": "float",
+            "default": 0.25,
+            "min": 0.0,
+            "max": 2.0
+        },
+        "opacity": {
+            "name": "Opacity",
+            "description": "Opacity of the touch indicator.",
+            "type": "int",
+            "default": 210,
+            "min": 20,
+            "max": 255
+        },
+        "image": {
+            "name": "Custom image",
+            "description": "Choose an image to use as the touch indicator. Leave empty to use the default circle.",
+            "type": "file",
+            "default": "",
+            "control": {
+                "dialog": "open",
+                "filters": [
+                    {
+                        "files": [
+                            "*.png",
+                            "*.jpg",
+                            "*.jpeg",
+                            "*.webp"
+                        ],
+                        "description": "Images"
+                    }
+                ]
+            }
+        }
+    }
+}
